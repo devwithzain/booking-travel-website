@@ -10,6 +10,7 @@
 !.yarn/releases
 !.yarn/versions
 
+/justbookit
 # testing
 /coverage
 
