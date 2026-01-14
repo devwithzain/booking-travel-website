@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { featuresData } from "@/constants";
-import { about01, dotsbubbles, thumb } from "@/public";
+import { homeAbout, dotsbubbles, thumb } from "@/public";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function FeaturedHoliday() {
@@ -19,8 +19,8 @@ export default function FeaturedHoliday() {
 					</div>
 					<div className="w-full relative z-10 rounded-xl overflow-hidden shadow-xl">
 						<Image
-							src={about01}
-							alt="about01"
+							src={homeAbout}
+							alt="homeAbout"
 							width={800}
 							height={800}
 							className="w-full h-full object-cover rounded-xl"
@@ -81,7 +81,7 @@ export default function FeaturedHoliday() {
 				</div>
 				<div className="w-full">
 					<h2 className="heading leading-tight text-black font-bold">
-						The Best Holidays Start Here!
+						The Best Holidays <br /> Start Here!
 					</h2>
 					<p className="paragraph text-muted-foreground mb-10">
 						Book your hotel with us and don&apos;t forget to grab an awesome

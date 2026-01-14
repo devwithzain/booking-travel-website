@@ -1,8 +1,7 @@
-"use client";
 import {
-	Hero,
 	Brands,
 	AppLink,
+	HomeHero,
 	OfferSlider,
 	ExploreNearby,
 	FeaturedHotels,
@@ -13,7 +12,7 @@ import Testimonials from "@/components/testimonials";
 export default function Home() {
 	return (
 		<>
-			<Hero />
+			<HomeHero />
 			<OfferSlider />
 			<FeaturedHoliday />
 			<FeaturedHotels />

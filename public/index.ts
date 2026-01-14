@@ -4,8 +4,8 @@ export { default as smile } from "./smile.svg";
 export { default as thumb } from "./thumb.svg";
 export { default as error } from "./error.svg";
 export { default as avatar } from "./avatar.jpg";
-export { default as about01 } from "./about01.jpg";
 export { default as heroImg } from "./heroImg.jpg";
+export { default as homeAbout } from "./homeAbout.jpg";
 
 export { default as client1 } from "./client01.jpg";
 export { default as client2 } from "./client02.jpg";
@@ -56,3 +56,16 @@ export { default as brand03 } from "./brand03.svg";
 export { default as brand04 } from "./brand04.svg";
 export { default as brand05 } from "./brand05.svg";
 export { default as brand06 } from "./brand06.svg";
+
+export { default as subscribers } from "./subscribers.svg";
+export { default as happyCustomers } from "./happyCustomers.svg";
+export { default as globalCustomers } from "./globaCustomers.svg";
+
+export { default as about01 } from "./about01.jpg";
+export { default as about02 } from "./about02.jpg";
+export { default as about03 } from "./about03.jpg";
+
+export { default as team01 } from "./team01.jpg";
+export { default as team02 } from "./team02.jpg";
+export { default as team03 } from "./team03.jpg";
+export { default as team04 } from "./team04.jpg";

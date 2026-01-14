@@ -32,6 +32,10 @@ import {
 	offer3,
 	offer4,
 	smile,
+	team01,
+	team02,
+	team03,
+	team04,
 	wow,
 } from "@/public";
 import {
@@ -445,5 +449,32 @@ export const brandData = [
 	{
 		id: 6,
 		image: brand06,
+	},
+];
+
+export const teamData = [
+	{
+		id: 1,
+		image: team01,
+		name: "Dennis Barrett",
+		role: "UK Tourist Guide",
+	},
+	{
+		id: 2,
+		image: team02,
+		name: "Jacqueline Miller",
+		role: "Us Tourist Guide",
+	},
+	{
+		id: 3,
+		image: team03,
+		name: "Larry Lawson",
+		role: "Editor in Chief",
+	},
+	{
+		id: 4,
+		image: team04,
+		name: "Louis Ferguson",
+		role: "CEO & Founder",
 	},
 ];
