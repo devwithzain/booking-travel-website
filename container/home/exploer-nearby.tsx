@@ -1,5 +1,5 @@
-import { exploreNearbyData } from "@/constants";
 import Image from "next/image";
+import { exploreNearbyData } from "@/constants";
 
 export default function ExploreNearby() {
 	return (
@@ -19,8 +19,8 @@ export default function ExploreNearby() {
 								<Image
 									src={item.image}
 									alt="clients-images"
-									width={150}
-									height={150}
+									width={200}
+									height={200}
 									className="transition-transform duration-500 group-hover:scale-110 object-cover w-full h-full"
 								/>
 							</div>

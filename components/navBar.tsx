@@ -19,8 +19,8 @@ import { bookingHomeMenuItems, userProfileMenuItems } from "@/constants";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function NavBar() {
-	const [isScrolled, setIsScrolled] = useState(false);
 	const pathname = usePathname();
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -39,7 +39,6 @@ export default function NavBar() {
 					: "bg-transparent",
 			)}>
 			<div className="w-full flex items-center justify-between">
-				{/* Logo */}
 				<div className="flex items-center gap-10">
 					<Image
 						src={logo}
@@ -70,26 +69,31 @@ export default function NavBar() {
 						))}
 					</nav>
 				</div>
-
-				{/* Desktop Menu */}
 				<nav className="flex gap-6">
 					{bookingHomeMenuItems.map((item) => (
 						<Link
 							key={item.key}
 							href={item.href}
 							className={cn(
-								"flex items-center gap-2 text-base font-medium transition-colors hover:text-primary",
+								"flex items-center gap-2 text-base font-medium transition-colors rounded-md",
 								pathname === item.href
-									? "text-primary"
+									? "text-[#5143d9] bg-[#5143d91a] px-2.5 py-1"
 									: "text-muted-foreground",
 							)}>
-							<item.icon className="h-4 w-4" />
+							<Image
+								width={20}
+								height={20}
+								src={item.icon}
+								alt={item.label}
+								className={cn(
+									"w-4 h-4 object-cover",
+									pathname === item.href && "fill-[#000456]",
+								)}
+							/>
 							{item.label}
 						</Link>
 					))}
-					{/* Right Side Actions */}
 					<div className="flex items-center gap-4">
-						{/* Notifications */}
 						<DropdownMenu>
 							<DropdownMenuTrigger asChild>
 								<Button
@@ -111,7 +115,6 @@ export default function NavBar() {
 								</div>
 							</DropdownMenuContent>
 						</DropdownMenu>
-						{/* User Profile */}
 						<DropdownMenu>
 							<DropdownMenuTrigger asChild>
 								<div>
@@ -159,8 +162,6 @@ export default function NavBar() {
 								</DropdownMenuItem>
 							</DropdownMenuContent>
 						</DropdownMenu>
-
-						{/* Mobile Menu */}
 						<div className="sm:block xm:block hidden">
 							<Sheet>
 								<SheetTrigger asChild>
@@ -179,7 +180,13 @@ export default function NavBar() {
 												key={item.key}
 												href={item.href}
 												className="flex items-center gap-2 text-lg font-medium">
-												<item.icon className="h-5 w-5" />
+												<Image
+													src={item.icon}
+													alt={item.label}
+													width={20}
+													height={20}
+													className="object-cover"
+												/>
 												{item.label}
 											</Link>
 										))}

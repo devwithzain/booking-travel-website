@@ -7,8 +7,8 @@ import AvailabilityFilter from "@/container/home/availability-filter";
 export default function Hero() {
 	return (
 		<section className="w-full h-screen padding-x">
-			<div className="w-full h-full flex items-end justify-center absolute top-0 left-0">
-				<div className="w-[70%] flex items-start justify-between gap-20 relative mb-20">
+			<div className="w-full h-full flex items-center justify-center absolute top-0 left-0">
+				<div className="w-[70%] flex items-start justify-between gap-20 relative">
 					<div className="w-1/2 flex flex-col gap-8 relative z-10 mt-10">
 						<h1 className="text-7xl font-bold text-black leading-tight">
 							Find the top <br />
@@ -55,13 +55,13 @@ export default function Hero() {
 						<AvailabilityFilter />
 					</div>
 					<div className="w-1/2 relative">
-						<div className="relative rounded-2xl shadow-2xl">
+						<div className="relative rounded-2xl">
 							<Image
 								src={heroImg}
 								alt="Hero"
 								width={800}
 								height={600}
-								className="w-full h-[800px] object-cover rounded-2xl"
+								className="w-full h-180 object-cover rounded-2xl"
 								priority
 							/>
 							<div className="absolute top-10 -left-7 z-50">

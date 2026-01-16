@@ -19,7 +19,7 @@ export default function OfferSlider() {
 	return (
 		<section className="w-full padding-x pb-10">
 			<div className="w-full flex items-center justify-center">
-				<div className="w-[70%] relative group">
+				<div className="w-[80%] relative group">
 					<div>
 						<button
 							title="Previous slide"

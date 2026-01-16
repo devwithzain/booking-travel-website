@@ -1,10 +1,15 @@
 import {
+	blog01,
+	blog02,
+	blog03,
+	blog04,
 	brand01,
 	brand02,
 	brand03,
 	brand04,
 	brand05,
 	brand06,
+	car,
 	client1,
 	client2,
 	client3,
@@ -15,6 +20,8 @@ import {
 	feturedHotel02,
 	feturedHotel03,
 	feturedHotel04,
+	flight,
+	hotel,
 	hotel01,
 	hotel02,
 	hotel03,
@@ -27,6 +34,14 @@ import {
 	hotel10,
 	hotel11,
 	hotel12,
+	moment01,
+	moment02,
+	moment03,
+	moment04,
+	moment05,
+	moment06,
+	moment07,
+	moment08,
 	offer1,
 	offer2,
 	offer3,
@@ -36,13 +51,10 @@ import {
 	team02,
 	team03,
 	team04,
+	tour,
 	wow,
 } from "@/public";
 import {
-	Building,
-	Plane,
-	Globe,
-	CarFront,
 	User,
 	Ticket,
 	Users,
@@ -152,25 +164,25 @@ export const bookingHomeMenuItems = [
 		key: "hotels-home",
 		label: "Hotel",
 		href: "/",
-		icon: Building,
+		icon: hotel,
 	},
 	{
 		key: "flights-home",
 		label: "Flight",
 		href: "/flights",
-		icon: Plane,
+		icon: flight,
 	},
 	{
 		key: "tour-home",
 		label: "Tour",
 		href: "/tours",
-		icon: Globe,
+		icon: tour,
 	},
 	{
 		key: "cabs-home",
 		label: "Cab",
 		href: "/cabs",
-		icon: CarFront,
+		icon: car,
 	},
 ];
 
@@ -476,5 +488,67 @@ export const teamData = [
 		image: team04,
 		name: "Louis Ferguson",
 		role: "CEO & Founder",
+	},
+];
+
+export const blogsData = [
+	{
+		id: 1,
+		title: "10 Ways on How to Improve your Hotel Operations",
+		image: blog01,
+		featured: true,
+	},
+	{
+		id: 2,
+		title: "Story of water world adventure",
+		author: "Jacqueline Miller",
+		image: blog02,
+	},
+	{
+		id: 3,
+		title: "How Hotel Technology Can Help Small Hotel Businesses",
+		author: "Frances Guerrero",
+		image: blog03,
+	},
+	{
+		id: 4,
+		title: "Hotel Service - Become a Guide for Your Guests",
+		author: "Louis Ferguson",
+		image: blog04,
+	},
+];
+
+export const momentsData = [
+	{
+		id: 1,
+		image: moment01,
+	},
+	{
+		id: 2,
+		image: moment02,
+	},
+	{
+		id: 3,
+		image: moment03,
+	},
+	{
+		id: 4,
+		image: moment04,
+	},
+	{
+		id: 5,
+		image: moment05,
+	},
+	{
+		id: 6,
+		image: moment06,
+	},
+	{
+		id: 7,
+		image: moment07,
+	},
+	{
+		id: 8,
+		image: moment08,
 	},
 ];

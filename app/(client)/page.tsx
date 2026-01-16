@@ -1,4 +1,5 @@
 import {
+	Blogs,
 	Brands,
 	AppLink,
 	HomeHero,
@@ -6,6 +7,7 @@ import {
 	ExploreNearby,
 	FeaturedHotels,
 	FeaturedHoliday,
+	Moments,
 } from "@/container";
 import Testimonials from "@/components/testimonials";
 
@@ -19,6 +21,8 @@ export default function Home() {
 			<Brands />
 			<Testimonials />
 			<ExploreNearby />
+			<Blogs />
+			<Moments />
 			<AppLink />
 		</>
 	);

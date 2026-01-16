@@ -69,3 +69,22 @@ export { default as team01 } from "./team01.jpg";
 export { default as team02 } from "./team02.jpg";
 export { default as team03 } from "./team03.jpg";
 export { default as team04 } from "./team04.jpg";
+
+export { default as car } from "./car.png";
+export { default as tour } from "./tour.png";
+export { default as hotel } from "./hotel.png";
+export { default as flight } from "./flight.png";
+
+export { default as blog01 } from "./blog01.jpg";
+export { default as blog02 } from "./blog02.jpg";
+export { default as blog03 } from "./blog03.jpg";
+export { default as blog04 } from "./blog04.jpg";
+
+export { default as moment01 } from "./moments01.jpg";
+export { default as moment02 } from "./moments02.jpg";
+export { default as moment03 } from "./moments03.jpg";
+export { default as moment04 } from "./moments04.jpg";
+export { default as moment05 } from "./moments05.jpg";
+export { default as moment06 } from "./moments06.jpg";
+export { default as moment07 } from "./moments07.jpg";
+export { default as moment08 } from "./moments08.jpg";
