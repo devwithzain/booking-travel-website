@@ -8,8 +8,11 @@ export { default as ExploreNearby } from "./home/exploer-nearby";
 export { default as FeaturedHotels } from "./home/featured-hotels";
 export { default as FeaturedHoliday } from "./home/featured-holiday";
 
+export { default as FlightsCTA } from "./flights/cta";
 export { default as FlightsHero } from "./flights/hero";
 export { default as FlightsBlogs } from "./flights/blogs";
+export { default as FlightsProcess } from "./flights/process";
+export { default as SpecialOffers } from "./flights/special-offers";
 export { default as FlightsDestinations } from "./flights/destinations";
 
 export { default as AboutHero } from "./about/hero";

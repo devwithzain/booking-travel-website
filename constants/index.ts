@@ -51,6 +51,9 @@ import {
 	offer3,
 	offer4,
 	smile,
+	specialoffer01,
+	specialoffer02,
+	specialoffer03,
 	team01,
 	team02,
 	team03,
@@ -259,6 +262,39 @@ export const offerData = [
 		title: "Hot Summer Nights",
 		description: "Up to 3 nights free!",
 		href: "/offer-detail",
+	},
+];
+
+export const specialOffersData = [
+	{
+		id: 1,
+		brand: "ProNature",
+		logo: specialoffer01,
+		flatLabel: "Flat",
+		offer: "$899",
+		description: "On Domestic Flights",
+		coupon: "8B99OFF",
+		bg: "bg-emerald-50",
+	},
+	{
+		id: 2,
+		brand: "Snowflake",
+		logo: specialoffer02,
+		flatLabel: "Flat",
+		offer: "13%",
+		description: "On Domestic Flights",
+		coupon: "13POT7F",
+		bg: "bg-rose-50",
+	},
+	{
+		id: 3,
+		brand: "Mindfulness",
+		logo: specialoffer03,
+		flatLabel: "Flat",
+		offer: "$2,400",
+		description: "On International Flights",
+		coupon: "LOG165F",
+		bg: "bg-cyan-50",
 	},
 ];
 

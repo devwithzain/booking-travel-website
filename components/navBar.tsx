@@ -93,7 +93,7 @@ export default function NavBar() {
 							{item.label}
 						</Link>
 					))}
-					<div className="flex items-center gap-4">
+					<div className="flex items-center gap-2">
 						<DropdownMenu>
 							<DropdownMenuTrigger asChild>
 								<Button
@@ -116,30 +116,39 @@ export default function NavBar() {
 							</DropdownMenuContent>
 						</DropdownMenu>
 						<DropdownMenu>
-							<DropdownMenuTrigger asChild>
-								<div>
-									<Button variant="ghost">
-										<Image
-											src={avatar01}
-											alt="avatar"
-											width={30}
-											height={30}
-											className="w-full object-cover rounded-lg"
-										/>
-									</Button>
-								</div>
+							<DropdownMenuTrigger
+								asChild
+								className="p-0">
+								<Button variant="ghost">
+									<Image
+										src={avatar01}
+										alt="avatar"
+										width={30}
+										height={30}
+										className="w-full object-cover rounded-sm"
+									/>
+								</Button>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent
 								align="end"
 								className="w-56">
 								<DropdownMenuLabel>
-									<div className="flex flex-col space-y-1">
-										<p className="text-sm font-medium leading-none">
-											Lori Ferguson
-										</p>
-										<p className="text-xs leading-none text-muted-foreground">
-											example@gmail.com
-										</p>
+									<div className="flex items-center gap-2">
+										<Image
+											src={avatar01}
+											alt="avatar"
+											width={30}
+											height={30}
+											className="w-10 object-cover rounded-sm"
+										/>
+										<div className="flex flex-col space-y-1">
+											<p className="text-sm font-medium leading-none">
+												Lori Ferguson
+											</p>
+											<p className="text-xs leading-none text-muted-foreground">
+												example@gmail.com
+											</p>
+										</div>
 									</div>
 								</DropdownMenuLabel>
 								<DropdownMenuSeparator />
@@ -174,7 +183,7 @@ export default function NavBar() {
 									</Button>
 								</SheetTrigger>
 								<SheetContent side="right">
-									<div className="flex flex-col gap-6 mt-6">
+									<div className="flex flex-col gap-4 mt-6">
 										{bookingHomeMenuItems.map((item) => (
 											<Link
 												key={item.key}
