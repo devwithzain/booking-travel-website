@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { avatar, logo } from "@/public";
+import { avatar01, logo } from "@/public";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,7 @@ export default function NavBar() {
 	return (
 		<nav
 			className={cn(
-				"w-full padding-x py-4 sticky top-0 z-100 transition-all duration-300",
+				"w-full padding-x py-4 fixed top-0 z-100 transition-all duration-300",
 				isScrolled
 					? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-zinc-950/80"
 					: "bg-transparent",
@@ -120,7 +120,7 @@ export default function NavBar() {
 								<div>
 									<Button variant="ghost">
 										<Image
-											src={avatar}
+											src={avatar01}
 											alt="avatar"
 											width={30}
 											height={30}

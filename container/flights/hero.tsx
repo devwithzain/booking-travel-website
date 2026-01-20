@@ -6,8 +6,8 @@ import { Play } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import { Button } from "@/components/ui/button";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { heroImg, heroImg1, heroImg2, heroPlay } from "@/public";
-import AvailabilityFilter from "@/container/home/availability-filter";
+import FlightFilter from "@/container/flights/flight-filter";
+import { heroPlay, flightsHeroImg, heroImg1, heroImg2 } from "@/public";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +85,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="w-full h-screen padding-x overflow-x-hidden"
+			className="w-full h-screen padding-x overflow-x-hidden relative"
 			ref={containerRef}>
 			<div className="w-full h-full flex items-center justify-center absolute top-0 left-0">
 				<div className="w-[70%] flex items-start justify-between gap-20 relative">
@@ -93,9 +93,9 @@ export default function Hero() {
 						className="w-1/2 flex flex-col gap-8 relative z-10 mt-10"
 						ref={textRef}>
 						<h1 className="text-7xl font-bold text-black leading-tight">
-							Find the top <br />
+							Ready to <br />
 							<span className="relative inline-block text-primary">
-								Hotels nearby.
+								take off?
 								<svg
 									width="390px"
 									height="21px"
@@ -134,14 +134,14 @@ export default function Hero() {
 						</div>
 					</div>
 					<div className="absolute left-0 bottom-5 z-50 w-[80%]">
-						<AvailabilityFilter />
+						<FlightFilter />
 					</div>
 					<div
 						className="w-1/2 relative"
 						ref={imageRef}>
 						<div className="relative rounded-2xl">
 							<Image
-								src={heroImg}
+								src={flightsHeroImg}
 								alt="Hero"
 								width={800}
 								height={600}
@@ -228,7 +228,7 @@ export default function Hero() {
 										d="M125.4,118.4c-0.4-0.3-0.6-0.7-1.3-0.8c-1.6-0.1-1.6-0.2-1.9-1.9c-1.1-0.4-2.2,0-3.2,0.4 c-0.5-0.5-0.2-0.9-0.4-1.4c0.4-0.1,0.7-0.2,1-0.4v-3c-0.5,0.2-1,0.3-1.7,0.5c-0.3,0-0.4-0.6-0.8-0.7c0.6-1.5,1.8-2.4,2.8-3.5 c1.3,0.3,2.6-1.1,3.8,0.4c0,0.1-0.1,1.8,0,2.1c-0.2,0-0.5,0.1-0.7,0.1c-0.2,0-0.3,0-0.5,0c-0.4,0.4-0.1,1.1-0.7,1.5 c1.3-0.5,2.4-1,3.3-2c0.4,0.4,0.7,0.8,1.4,0.6c-1.1,0.9,0.4,2.1-1,2.9c1,0,1.1-0.6,1.5-0.8c0.4-0.1,0.8-0.1,1.2-0.2 c0.5,1,1.1,1.8,0.6,3c-0.7,0.6-2.2,0.4-2.5,2.1c1.2-0.2,1.9-0.9,2.5-1.5c0.7,0.1,0.7,0.5,0.6,0.8c-1.3-0.1-1.2,1.5-2.3,1.9 c-0.9,0.3-1.6,1-2.7,1.8C124.7,119.5,125.1,119,125.4,118.4"></path>
 									<path
 										className="fill-[#f7c32e]"
-										d="M101.7,41c-0.3,0.3-0.6,0.6-0.9,0.9c0.9,0.6-0.9,1.6,0.4,2.1c-2,2.3-2,2.4-2.1,4.8h-2.4c-0.2-0.1,0-0.5-0.2-0.8 c-2.4-0.3-2.9-0.8-3-3.3c0-0.6,0.2-1.4-0.5-1.8c0.5-0.7,0.2-1.6,0.7-2.4c1-1.5,2.3-2.7,3.5-3.9c0.5-0.2,1-0.1,1.4,0 c0.2,1-1.1,1.6-0.2,2.6c0.3-0.4,0.6-0.8,0.9-1.3C100.2,39.2,101.7,39.5,101.7,41"></path>
+										d="M101.7,41c-0.3,0.3-0.6-0.6-0.9,0.9c0.9,0.6-0.9,1.6,0.4,2.1c-2,2.3-2,2.4-2.1,4.8h-2.4c-0.2-0.1,0-0.5-0.2-0.8 c-2.4-0.3-2.9-0.8-3-3.3c0-0.6,0.2-1.4-0.5-1.8c0.5-0.7,0.2-1.6,0.7-2.4c1-1.5,2.3-2.7,3.5-3.9c0.5-0.2,1-0.1,1.4,0 c0.2,1-1.1,1.6-0.2,2.6c0.3-0.4,0.6-0.8,0.9-1.3C100.2,39.2,101.7,39.5,101.7,41"></path>
 									<path
 										className="fill-[#f7c32e]"
 										d="M140.4,5.4c-0.4,0.6-1.2-0.1-1.5,0.6c0.7,0.4,1.5,0.1,2.3,0.2c0.3,1.1,0.9,2.1,1.3,3.2c0.9,2.4,0.3,4.4-0.6,6.6 c-0.4,0.9-0.9,1.2-1.9,1c-0.2-0.5-0.5-1.2-0.9-1.9c-0.6-0.2-1.5,0-1.9-1c0.1-1.7,0.1-3.6-1.1-5.2c0.4-0.7,0.7-1.3,1.1-1.9 c-0.3-0.1-0.6-0.2-1-0.4c0.2-0.8,0.5-1.6,1.3-2.3h2.2C140,4.6,140.5,4.8,140.4,5.4"></path>

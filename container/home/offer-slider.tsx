@@ -2,11 +2,18 @@
 import { useCallback } from "react";
 import OfferCard from "./offer-card";
 import { offerData } from "@/constants";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function OfferSlider() {
-	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+	const [emblaRef, emblaApi] = useEmblaCarousel(
+		{
+			loop: true,
+			align: "start",
+		},
+		[Autoplay({ delay: 4000 })],
+	);
 
 	const scrollPrev = useCallback(() => {
 		if (emblaApi) emblaApi.scrollPrev();

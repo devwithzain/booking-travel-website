@@ -128,7 +128,7 @@ body {
 		@apply xxl:py-[60px] xl:py-[60px] lg:py-[40px] ml:py-[30px] md:py-[30px] sm:py-[20px] xm:py-[20px];
 	}
 	.heading {
-		@apply xxl:text-[65px] xl:text-[60px] lg:text-[55px] ml:text-[40px] md:text-[40px] sm:text-[35px] xm:text-[30px];
+		@apply xxl:text-[60px] xl:text-[50px] lg:text-[45px] ml:text-[40px] md:text-[40px] sm:text-[35px] xm:text-[30px];
 	}
 	.subHeading {
 		@apply xxl:text-[40px] xl:text-[35px] lg:text-[28px] ml:text-[22px] md:text-[22px] sm:text-[24px] xm:text-[24px];

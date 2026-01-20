@@ -16,6 +16,10 @@ import {
 	client4,
 	client5,
 	client6,
+	destination01,
+	destination02,
+	destination03,
+	destination04,
 	feturedHotel01,
 	feturedHotel02,
 	feturedHotel03,
@@ -290,6 +294,37 @@ export const featuredHotelsData = [
 		price: 665,
 		ratings: 4.8,
 		href: "/hotels.details",
+	},
+];
+
+export const destinationsData = [
+	{
+		location: "Thailand",
+		image: destination01,
+		next: "The next flight is on 26th Dec",
+		ratings: 4.5,
+		href: "hotels",
+	},
+	{
+		location: "Hong Kong",
+		image: destination02,
+		next: "Daily 1 flight",
+		ratings: 4.8,
+		href: "hotels",
+	},
+	{
+		location: "Maldives",
+		image: destination03,
+		next: "2 flights every week",
+		ratings: 4.6,
+		href: "hotels",
+	},
+	{
+		location: "Switzerland",
+		image: destination04,
+		next: "Filling fast, next available flight on 2nd Oct",
+		ratings: 4.8,
+		href: "hotels",
 	},
 ];
 

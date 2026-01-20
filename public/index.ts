@@ -3,9 +3,13 @@ export { default as logo } from "./logo.svg";
 export { default as smile } from "./smile.svg";
 export { default as thumb } from "./thumb.svg";
 export { default as error } from "./error.svg";
-export { default as avatar } from "./avatar.jpg";
 export { default as heroImg } from "./heroImg.jpg";
 export { default as homeAbout } from "./homeAbout.jpg";
+
+export { default as avatar01 } from "./avatar01.jpg";
+export { default as avatar02 } from "./avatar02.jpg";
+export { default as avatar03 } from "./avatar03.jpg";
+export { default as avatar04 } from "./avatar04.jpg";
 
 export { default as client1 } from "./client01.jpg";
 export { default as client2 } from "./client02.jpg";
@@ -88,3 +92,9 @@ export { default as moment05 } from "./moments05.jpg";
 export { default as moment06 } from "./moments06.jpg";
 export { default as moment07 } from "./moments07.jpg";
 export { default as moment08 } from "./moments08.jpg";
+
+export { default as flightsHeroImg } from "./flightsHeroImg.jpg";
+export { default as destination01 } from "./destination01.jpg";
+export { default as destination02 } from "./destination02.jpg";
+export { default as destination03 } from "./destination03.jpg";
+export { default as destination04 } from "./destination04.jpg";

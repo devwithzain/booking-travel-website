@@ -1,24 +1,17 @@
 "use client";
-import { useCallback } from "react";
-import OfferCard from "./offer-card";
-import { momentsData } from "@/constants";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { momentsData } from "@/constants";
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function Moments() {
-	const [emblaRef, emblaApi] = useEmblaCarousel({
-		loop: true,
-		align: "start",
-	});
-
-	const scrollPrev = useCallback(() => {
-		if (emblaApi) emblaApi.scrollPrev();
-	}, [emblaApi]);
-
-	const scrollNext = useCallback(() => {
-		if (emblaApi) emblaApi.scrollNext();
-	}, [emblaApi]);
+	const [emblaRef] = useEmblaCarousel(
+		{
+			loop: true,
+			align: "start",
+		},
+		[Autoplay({ delay: 4000 })],
+	);
 
 	return (
 		<div className="w-full padding-y p-5">
@@ -45,20 +38,6 @@ export default function Moments() {
 								/>
 							</div>
 						))}
-						<div className="w-full absolute top-1/2 -translate-y-1/2 z-20">
-							<button
-								title="Previous testimonial"
-								className="absolute -left-16 group-hover:-left-8 p-2 rounded-full bg-white shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white border-2 border-black"
-								onClick={scrollPrev}>
-								<ChevronLeft size={24} />
-							</button>
-							<button
-								title="Next testimonial"
-								className="absolute -right-16 group-hover:-right-8 p-2 rounded-full bg-white shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white border-2 border-black"
-								onClick={scrollNext}>
-								<ChevronRight size={24} />
-							</button>
-						</div>
 					</div>
 				</div>
 			</div>
