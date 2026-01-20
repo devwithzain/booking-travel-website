@@ -7,7 +7,7 @@ export default function Destinations() {
 	return (
 		<section className="w-full padding-x padding-y">
 			<div className="w-full flex items-center justify-center">
-				<div className="w-[80%] flex flex-col gap-5">
+				<div className="w-full flex flex-col gap-5">
 					<div>
 						<h2 className="text-black heading font-bold leading-tight text-center">
 							Popular Destinations

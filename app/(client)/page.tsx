@@ -1,7 +1,6 @@
 import {
 	Blogs,
 	Brands,
-	AppLink,
 	HomeHero,
 	OfferSlider,
 	ExploreNearby,
@@ -23,7 +22,6 @@ export default function Home() {
 			<ExploreNearby />
 			<Blogs />
 			<Moments />
-			<AppLink />
 		</>
 	);
 }

@@ -1,5 +1,4 @@
-import Footer from "@/components/footer";
-import NavBar from "@/components/navBar";
+import { AppLink, Footer, NavBar } from "@/components/index";
 
 export default function RootLayout({
 	children,
@@ -10,6 +9,7 @@ export default function RootLayout({
 		<body>
 			<NavBar />
 			{children}
+			<AppLink />
 			<Footer />
 		</body>
 	);

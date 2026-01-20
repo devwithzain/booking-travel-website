@@ -90,7 +90,7 @@ export default function FlightFilter() {
 			<div className="bg-black px-4 py-3 cursor-pointer rounded-md flex items-center gap-2 absolute -bottom-5 right-10">
 				<Send className="w-4 h-4 text-white" />
 				<button className="text-base font-medium text-white leading-tight pointer-events-none">
-					Search
+					Find Ticket
 				</button>
 			</div>
 		</div>

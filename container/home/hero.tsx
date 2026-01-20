@@ -93,9 +93,9 @@ export default function Hero() {
 						className="w-1/2 flex flex-col gap-8 relative z-10 mt-10"
 						ref={textRef}>
 						<h1 className="text-7xl font-bold text-black leading-tight">
-							Find the top <br />
+							Find the Top <br />
 							<span className="relative inline-block text-primary">
-								Hotels nearby.
+								Hotels Nearby.
 								<svg
 									width="390px"
 									height="21px"
@@ -133,7 +133,7 @@ export default function Hero() {
 							</div>
 						</div>
 					</div>
-					<div className="absolute left-0 bottom-5 z-50 w-[80%]">
+					<div className="absolute left-0 bottom-10 z-50 w-[80%]">
 						<AvailabilityFilter />
 					</div>
 					<div

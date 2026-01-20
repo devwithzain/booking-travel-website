@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Hero() {
 	return (
-		<section className="w-full min-h-screen padding-x padding-y">
+		<section className="w-full min-h-screen padding-x padding-y mt-20">
 			<div className="flex flex-col gap-10">
 				<div className="w-full flex flex-col items-center justify-center gap-5">
 					<h1 className="text-6xl font-bold text-black leading-tight text-center tracking-tight">
