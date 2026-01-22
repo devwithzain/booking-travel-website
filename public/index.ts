@@ -105,3 +105,28 @@ export { default as processimg01 } from "./processimg01.svg";
 export { default as processimg02 } from "./processimg02.svg";
 export { default as processimg03 } from "./processimg03.svg";
 export { default as flightctaimg01 } from "./flightctaimg01.svg";
+
+export { default as toursherobg } from "./toursherobg.webp";
+export { default as package01 } from "./package01.jpg";
+export { default as package02 } from "./package02.jpg";
+export { default as package03 } from "./package03.jpg";
+export { default as package04 } from "./package04.jpg";
+export { default as category01 } from "./category01.jpg";
+export { default as category02 } from "./category02.jpg";
+export { default as category03 } from "./category03.jpg";
+export { default as category04 } from "./category04.jpg";
+export { default as category05 } from "./category05.jpg";
+export { default as category06 } from "./category06.jpg";
+export { default as category07 } from "./category07.jpg";
+export { default as category08 } from "./category08.jpg";
+export { default as discover01 } from "./discover01.jpg";
+export { default as discover02 } from "./discover02.jpg";
+export { default as discover03 } from "./discover03.jpg";
+
+export { default as cabsHeroImg } from "./cabsHeroImg.png";
+export { default as cab01 } from "./cab01.svg";
+export { default as cab02 } from "./cab02.svg";
+export { default as cab03 } from "./cab03.svg";
+export { default as cab04 } from "./cab04.svg";
+export { default as cab05 } from "./cab05.svg";
+export { default as cab06 } from "./cab06.svg";

@@ -125,7 +125,7 @@ export default function NavBar() {
 										alt="avatar"
 										width={30}
 										height={30}
-										className="w-full object-cover rounded-sm"
+										className="w-10 h-10 object-cover rounded-sm"
 									/>
 								</Button>
 							</DropdownMenuTrigger>

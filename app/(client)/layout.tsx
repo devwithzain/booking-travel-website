@@ -1,4 +1,4 @@
-import { AppLink, Footer, NavBar } from "@/components/index";
+import { AppLink, Footer, NavBar, NewsLetter } from "@/components/index";
 
 export default function RootLayout({
 	children,
@@ -9,6 +9,7 @@ export default function RootLayout({
 		<body>
 			<NavBar />
 			{children}
+			<NewsLetter />
 			<AppLink />
 			<Footer />
 		</body>

@@ -14,5 +14,12 @@ export { default as FlightsProcess } from "./flights/process";
 export { default as SpecialOffers } from "./flights/special-offers";
 export { default as FlightsDestinations } from "./flights/destinations";
 
+export { default as ToursHero } from "./tours/hero";
+export { default as Discover } from "./tours/discover";
+export { default as HomePackages } from "./tours/packages";
+export { default as TopCategories } from "./tours/top-categories";
+
 export { default as AboutHero } from "./about/hero";
 export { default as AboutStory } from "./about/story";
+
+export { default as CabHero } from "./cabs/hero";

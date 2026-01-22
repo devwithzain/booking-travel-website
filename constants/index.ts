@@ -10,6 +10,14 @@ import {
 	brand05,
 	brand06,
 	car,
+	category01,
+	category02,
+	category03,
+	category04,
+	category05,
+	category06,
+	category07,
+	category08,
 	client1,
 	client2,
 	client3,
@@ -50,6 +58,10 @@ import {
 	offer2,
 	offer3,
 	offer4,
+	package01,
+	package02,
+	package03,
+	package04,
 	smile,
 	specialoffer01,
 	specialoffer02,
@@ -330,6 +342,45 @@ export const featuredHotelsData = [
 		price: 665,
 		ratings: 4.8,
 		href: "/hotels.details",
+	},
+];
+
+export const toursPackagesData = [
+	{
+		location: "Lombok, Indonesia",
+		image: package01,
+		tag: "Adventure",
+		price: 1385,
+		ratings: 4.3,
+		days: "6 Days / 5 Nights",
+		href: "/tours",
+	},
+	{
+		location: "Northern Lights Escape",
+		image: package02,
+		tag: "History",
+		price: 2569,
+		ratings: 4.5,
+		days: "8 Days / 7 Nights",
+		href: "/tours",
+	},
+	{
+		location: "Essential Egypt",
+		image: package03,
+		tag: "Desert",
+		price: 1885,
+		ratings: 4.2,
+		days: "9 Days / 8 Nights",
+		href: "/tours",
+	},
+	{
+		location: "Phi Phi Islands",
+		image: package04,
+		tag: "Beach",
+		price: 3585,
+		ratings: 4.6,
+		days: "9 Days / 8 Nights",
+		href: "/tours",
 	},
 ];
 
@@ -621,5 +672,56 @@ export const momentsData = [
 	{
 		id: 8,
 		image: moment08,
+	},
+];
+
+export const topCategoriesData = [
+	{
+		id: 1,
+		name: "Beach",
+		places: "4568 places",
+		image: category01,
+	},
+	{
+		id: 2,
+		name: "Heritage",
+		places: "2845 places",
+		image: category02,
+	},
+	{
+		id: 3,
+		name: "Desert",
+		places: "1587",
+		image: category03,
+	},
+	{
+		id: 4,
+		name: "Tower",
+		places: "986 places",
+		image: category04,
+	},
+	{
+		id: 5,
+		name: "Mountain",
+		places: "786 places",
+		image: category05,
+	},
+	{
+		id: 6,
+		name: "Safari",
+		places: "568 places",
+		image: category06,
+	},
+	{
+		id: 7,
+		name: "Temple",
+		places: "256 places",
+		image: category07,
+	},
+	{
+		id: 8,
+		name: "Festival",
+		places: "654 places",
+		image: category08,
 	},
 ];
