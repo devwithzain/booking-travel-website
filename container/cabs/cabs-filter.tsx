@@ -4,10 +4,12 @@ import {
 	MapPin,
 	ArrowRightLeft,
 	Calendar as CalendarIcon,
+	Clock,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Combobox, DatePicker } from "@/components/index";
+import TimePicker from "./time-picker";
 
 export default function CabsFilter() {
 	const [activeTab, setActiveTab] = useState<"oneway" | "roundtrip">("oneway");
@@ -36,22 +38,12 @@ export default function CabsFilter() {
 							Round Trip
 						</button>
 					</div>
-					<div className="flex items-center gap-4">
-						<div className="w-[170px] border border-black/10 rounded-lg">
-							<Combobox />
-						</div>
-						<div className="w-[170px] border border-black/10 rounded-lg">
-							<Combobox />
-						</div>
-					</div>
 				</div>
 				<div className="w-full flex items-center gap-3 relative">
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors relative border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
-								Pickup
-							</span>
+							<span className="text-sm font-normal text-gray-500">Pickup</span>
 						</div>
 						<Combobox />
 						<div className="absolute top-1/2 -right-[26px] -translate-y-1/2 z-10">
@@ -63,36 +55,56 @@ export default function CabsFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">Drop</span>
+							<span className="text-sm font-normal text-gray-500">Drop</span>
 						</div>
 						<Combobox />
 					</div>
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<CalendarIcon className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
+							<span className="text-sm font-normal text-gray-500">
 								Pickup Date
 							</span>
 						</div>
 						<DatePicker />
 					</div>
-					{activeTab === "roundtrip" && (
-						<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
-							<div className="flex items-center gap-1 mb-2">
-								<CalendarIcon className="w-5 h-5 text-gray-400" />
-								<span className="text-base font-normal text-gray-500">
-									Return
-								</span>
-							</div>
-							<DatePicker />
+					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
+						<div className="flex items-center gap-1 mb-2">
+							<Clock className="w-5 h-5 text-gray-400" />
+							<span className="text-sm font-normal text-gray-500">
+								Pickup Time
+							</span>
 						</div>
+						<TimePicker />
+					</div>
+					{activeTab === "roundtrip" && (
+						<>
+							<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
+								<div className="flex items-center gap-1 mb-2">
+									<CalendarIcon className="w-5 h-5 text-gray-400" />
+									<span className="text-sm font-normal text-gray-500">
+										Return Date
+									</span>
+								</div>
+								<DatePicker />
+							</div>
+							<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
+								<div className="flex items-center gap-1 mb-2">
+									<Clock className="w-5 h-5 text-gray-400" />
+									<span className="text-sm font-normal text-gray-500">
+										Return Time
+									</span>
+								</div>
+								<TimePicker />
+							</div>
+						</>
 					)}
 				</div>
 			</div>
 			<div className="bg-black px-4 py-3 cursor-pointer rounded-md flex items-center gap-2 absolute -bottom-5 right-10">
 				<Send className="w-4 h-4 text-white" />
 				<button className="text-base font-medium text-white leading-tight pointer-events-none">
-					Find Ticket
+					Search Cab
 				</button>
 			</div>
 		</div>

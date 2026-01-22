@@ -49,7 +49,7 @@ export default function FlightFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors relative border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">From</span>
+							<span className="text-sm font-normal text-gray-500">From</span>
 						</div>
 						<Combobox />
 						<div className="absolute top-1/2 -right-[26px] -translate-y-1/2 z-10">
@@ -61,14 +61,14 @@ export default function FlightFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">To</span>
+							<span className="text-sm font-normal text-gray-500">To</span>
 						</div>
 						<Combobox />
 					</div>
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<CalendarIcon className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
+							<span className="text-sm font-normal text-gray-500">
 								Departure
 							</span>
 						</div>
@@ -78,7 +78,7 @@ export default function FlightFilter() {
 						<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 							<div className="flex items-center gap-1 mb-2">
 								<CalendarIcon className="w-5 h-5 text-gray-400" />
-								<span className="text-base font-normal text-gray-500">
+								<span className="text-sm font-normal text-gray-500">
 									Return
 								</span>
 							</div>

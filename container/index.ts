@@ -23,3 +23,6 @@ export { default as AboutHero } from "./about/hero";
 export { default as AboutStory } from "./about/story";
 
 export { default as CabHero } from "./cabs/hero";
+export { default as FAQSection } from "./cabs/faqs";
+export { default as AwesomeVehicles } from "./cabs/awesome-vehicles";
+export { default as WhyChooseUs } from "./cabs/why-chose-us";

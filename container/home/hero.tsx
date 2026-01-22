@@ -85,7 +85,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="w-full h-screen padding-x overflow-x-hidden"
+			className="w-full h-screen padding-x overflow-x-hidden relative"
 			ref={containerRef}>
 			<div className="w-full h-full flex items-center justify-center absolute top-0 left-0">
 				<div className="w-[70%] flex items-start justify-between gap-20 relative">
@@ -133,7 +133,7 @@ export default function Hero() {
 							</div>
 						</div>
 					</div>
-					<div className="absolute left-0 bottom-10 z-50 w-[80%]">
+					<div className="absolute left-0 bottom-8 z-50 w-[80%]">
 						<AvailabilityFilter />
 					</div>
 					<div

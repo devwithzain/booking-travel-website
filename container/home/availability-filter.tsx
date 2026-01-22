@@ -32,7 +32,7 @@ export default function AvailabilityFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors relative border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
+							<span className="text-sm font-normal text-gray-500">
 								Location
 							</span>
 						</div>
@@ -41,7 +41,7 @@ export default function AvailabilityFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<MapPin className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
+							<span className="text-sm font-normal text-gray-500">
 								Check In & Out
 							</span>
 						</div>
@@ -50,7 +50,7 @@ export default function AvailabilityFilter() {
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
 							<User className="w-5 h-5 text-gray-400" />
-							<span className="text-base font-normal text-gray-500">
+							<span className="text-sm font-normal text-gray-500">
 								Guests & Rooms
 							</span>
 						</div>

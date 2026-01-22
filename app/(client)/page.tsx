@@ -8,7 +8,7 @@ import {
 	FeaturedHoliday,
 	Moments,
 } from "@/container";
-import Testimonials from "@/components/testimonials";
+import { Testimonials } from "@/components/index";
 
 export default function Home() {
 	return (

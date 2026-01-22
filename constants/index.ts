@@ -9,6 +9,12 @@ import {
 	brand04,
 	brand05,
 	brand06,
+	cab01,
+	cab02,
+	cab03,
+	cab04,
+	cab05,
+	cab06,
 	car,
 	category01,
 	category02,
@@ -89,6 +95,10 @@ import {
 	Timer,
 	ShieldCheck,
 	Zap,
+	Leaf,
+	Car,
+	Wifi,
+	Accessibility,
 } from "lucide-react";
 
 export const testimonialsData = [
@@ -723,5 +733,140 @@ export const topCategoriesData = [
 		name: "Festival",
 		places: "654 places",
 		image: category08,
+	},
+];
+
+export const faqData = [
+	{
+		id: 1,
+		question: "How Does it Work?",
+		answer:
+			"Yet remarkably appearance gets him his projection. Diverted endeavor bed peculiar men the not desirous. Acuteness abilities ask can offending furnished fulfilled sex. Warrant fifteen exposed ye at mistake. Blush since so in noisy still built up an again. As young ye hopes no place means. Partiality diminution gay yet entreaties admiration. In mention perhaps attempt pointed suppose. Unknown ye chamber of warrant of Norland arrived.",
+	},
+	{
+		id: 2,
+		question: "What are monthly tracked users?",
+		answer:
+			"Monthly tracked users are unique users who interact with your product within a given month. This metric helps measure engagement and growth trends.",
+	},
+	{
+		id: 3,
+		question: "What if I go with my prepaid monthly",
+		answer:
+			"If you choose a prepaid monthly plan, your services remain active until the plan expires, regardless of usage limits.",
+	},
+	{
+		id: 4,
+		question: "What's the difference between cabs and taxi",
+		answer:
+			"Cabs are typically app-based ride services, while taxis are traditionally hailed on the street or booked via dispatch.",
+	},
+	{
+		id: 5,
+		question: "How can I check the fare for my Booking ride?",
+		answer:
+			"You can view the estimated fare before confirming your ride directly in the booking flow.",
+	},
+	{
+		id: 6,
+		question: "Do and Don'ts – Tips for a Safe Trip",
+		answer:
+			"Always verify driver details, wear seat belts, and avoid sharing sensitive information during your ride.",
+	},
+];
+
+export const awesomeVehiclesData = [
+	{
+		id: 1,
+		name: "Sedan",
+		seats: "(8 Sedans)",
+		image: cab01,
+	},
+	{
+		id: 2,
+		name: "Micro",
+		seats: "(8 Micros)",
+		image: cab02,
+	},
+	{
+		id: 3,
+		name: "Micro",
+		seats: "(8 Micros)",
+		image: cab03,
+	},
+	{
+		id: 4,
+		name: "CUV",
+		seats: "(4 CUVs)",
+		image: cab04,
+	},
+	{
+		id: 5,
+		name: "Pick up",
+		seats: "(3 Pick ups)",
+		image: cab05,
+	},
+	{
+		id: 6,
+		name: "Coupe",
+		seats: "(9 Coupes)",
+		image: cab06,
+	},
+];
+
+export const whyChooseUsData = [
+	{
+		id: 1,
+		title: "Advance Booking",
+		description:
+			"Happiness prosperous impression had conviction For every delay in they Extremity now.",
+		icon: Zap,
+		bg: "bg-indigo-100",
+		color: "text-indigo-600",
+	},
+	{
+		id: 2,
+		title: "Economical Trip",
+		description:
+			"Extremity now strangers contained breakfast him discourse additions Sincerity.",
+		icon: Leaf,
+		bg: "bg-emerald-100",
+		color: "text-emerald-600",
+	},
+	{
+		id: 3,
+		title: "Secure and Safer",
+		description:
+			"Perpetual extremity now strangers contained breakfast him discourse additions.",
+		icon: ShieldCheck,
+		bg: "bg-yellow-100",
+		color: "text-yellow-600",
+	},
+	{
+		id: 4,
+		title: "Vehicle Options",
+		description:
+			"The Prosperous impression had conviction For every delay in they Extremity now.",
+		icon: Car,
+		bg: "bg-rose-100",
+		color: "text-rose-600",
+	},
+	{
+		id: 5,
+		title: "Cab Entertainment",
+		description:
+			"Extremity now strangers contained breakfast him discourse additions Sincerity.",
+		icon: Wifi,
+		bg: "bg-orange-100",
+		color: "text-orange-600",
+	},
+	{
+		id: 6,
+		title: "Polite Driver",
+		description:
+			"Perpetual extremity now strangers contained breakfast him discourse additions.",
+		icon: Accessibility,
+		bg: "bg-cyan-100",
+		color: "text-cyan-600",
 	},
 ];
