@@ -26,3 +26,6 @@ export { default as CabHero } from "./cabs/hero";
 export { default as FAQSection } from "./cabs/faqs";
 export { default as AwesomeVehicles } from "./cabs/awesome-vehicles";
 export { default as WhyChooseUs } from "./cabs/why-chose-us";
+
+export { default as ContactHero } from "./contact/hero";
+export { default as ContactForm } from "./contact/form";

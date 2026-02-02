@@ -130,3 +130,5 @@ export { default as cab03 } from "./cab03.svg";
 export { default as cab04 } from "./cab04.svg";
 export { default as cab05 } from "./cab05.svg";
 export { default as cab06 } from "./cab06.svg";
+
+export { default as contactbg } from "./contactbg.svg";
