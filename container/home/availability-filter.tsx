@@ -5,20 +5,57 @@ import {
 	PopoverTrigger,
 } from "@/components/ui/popover";
 import { useState } from "react";
+import { addDays } from "date-fns";
+import { TDestination } from "@/types";
 import { CheckInOut } from "./check-in-out";
+import { useRouter } from "next/navigation";
 import { Combobox } from "@/components/index";
+import { formatDate } from "@/lib/booking-api";
 import { Button } from "@/components/ui/button";
+import { type DateRange } from "react-day-picker";
 import { Separator } from "@/components/ui/separator";
 import { Send, MapPin, User, ChevronDown } from "lucide-react";
 
 export default function AvailabilityFilter() {
-	const [open, setOpen] = useState(false);
-
-	const [guests, setGuests] = useState({
-		adults: 2,
-		children: 0,
-		rooms: 1,
+	const router = useRouter();
+	const [guestsOpen, setGuestsOpen] = useState(false);
+	const [selectedDest, setSelectedDest] = useState<TDestination | null>(null);
+	const [dateRange, setDateRange] = useState<DateRange | undefined>({
+		from: new Date(),
+		to: addDays(new Date(), 3),
 	});
+	const [guests, setGuests] = useState({
+		adults: 0,
+		children: 0,
+		rooms: 0,
+	});
+
+	const handleSearch = () => {
+		if (!selectedDest) {
+			alert("Please select a destination first!");
+			return;
+		}
+
+		const checkin = dateRange?.from
+			? formatDate(dateRange.from)
+			: formatDate(new Date());
+		const checkout = dateRange?.to
+			? formatDate(dateRange.to)
+			: formatDate(addDays(new Date(), 3));
+
+		const params = new URLSearchParams({
+			dest_id: selectedDest.dest_id,
+			dest_type: selectedDest.search_type || selectedDest.dest_type,
+			dest_label: selectedDest.label || selectedDest.city_name,
+			checkin,
+			checkout,
+			adults: String(guests.adults),
+			children: String(guests.children),
+			rooms: String(guests.rooms),
+		});
+
+		router.push(`/hotels?${params.toString()}`);
+	};
 
 	return (
 		<div className="w-full relative z-20">
@@ -36,7 +73,11 @@ export default function AvailabilityFilter() {
 								Location
 							</span>
 						</div>
-						<Combobox />
+						<Combobox
+							placeholder="Where are you going?"
+							onSelect={(dest) => setSelectedDest(dest)}
+							value={selectedDest}
+						/>
 					</div>
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
@@ -45,7 +86,10 @@ export default function AvailabilityFilter() {
 								Check In & Out
 							</span>
 						</div>
-						<CheckInOut />
+						<CheckInOut
+							dateRange={dateRange}
+							onDateRangeChange={setDateRange}
+						/>
 					</div>
 					<div className="flex-1 bg-[#f5f5f6] rounded-xl p-4 transition-colors border border-transparent focus-within:border-primary/20">
 						<div className="flex items-center gap-1 mb-2">
@@ -55,17 +99,17 @@ export default function AvailabilityFilter() {
 							</span>
 						</div>
 						<Popover
-							open={open}
-							onOpenChange={setOpen}>
+							open={guestsOpen}
+							onOpenChange={setGuestsOpen}>
 							<PopoverTrigger asChild>
 								<Button
 									variant="outline"
 									role="combobox"
-									aria-expanded={open}
+									aria-expanded={guestsOpen}
 									className="w-full justify-between border-none py-5">
 									{guests.adults} Adults, {guests.children} Children,{" "}
 									{guests.rooms} Room
-									<ChevronDown className="w-full" />
+									<ChevronDown className="w-4 h-4" />
 								</Button>
 							</PopoverTrigger>
 							<PopoverContent className="w-80 p-4">
@@ -77,107 +121,56 @@ export default function AvailabilityFilter() {
 										</p>
 									</div>
 									<Separator />
-									<div className="flex items-center justify-between">
-										<div className="text-sm">Adults</div>
-										<div className="flex items-center gap-2">
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														adults: Math.max(1, prev.adults - 1),
-													}))
-												}>
-												-
-											</Button>
-											<span className="w-4 text-center">{guests.adults}</span>
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														adults: prev.adults + 1,
-													}))
-												}>
-												+
-											</Button>
+									{(["adults", "children", "rooms"] as const).map((key) => (
+										<div
+											key={key}
+											className="flex items-center justify-between">
+											<div className="text-sm capitalize">{key}</div>
+											<div className="flex items-center gap-2">
+												<Button
+													variant="outline"
+													size="icon"
+													className="h-8 w-8"
+													onClick={() =>
+														setGuests((prev) => ({
+															...prev,
+															[key]: Math.max(
+																key === "children" ? 0 : 1,
+																prev[key] - 1,
+															),
+														}))
+													}>
+													−
+												</Button>
+												<span className="w-4 text-center">{guests[key]}</span>
+												<Button
+													variant="outline"
+													size="icon"
+													className="h-8 w-8"
+													onClick={() =>
+														setGuests((prev) => ({
+															...prev,
+															[key]: prev[key] + 1,
+														}))
+													}>
+													+
+												</Button>
+											</div>
 										</div>
-									</div>
-									<div className="flex items-center justify-between">
-										<div className="text-sm">Children</div>
-										<div className="flex items-center gap-2">
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														children: Math.max(0, prev.children - 1),
-													}))
-												}>
-												-
-											</Button>
-											<span className="w-4 text-center">{guests.children}</span>
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														children: prev.children + 1,
-													}))
-												}>
-												+
-											</Button>
-										</div>
-									</div>
-									<div className="flex items-center justify-between">
-										<div className="text-sm">Rooms</div>
-										<div className="flex items-center gap-2">
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														rooms: Math.max(1, prev.rooms - 1),
-													}))
-												}>
-												-
-											</Button>
-											<span className="w-4 text-center">{guests.rooms}</span>
-											<Button
-												variant="outline"
-												size="icon"
-												className="h-8 w-8"
-												onClick={() =>
-													setGuests((prev) => ({
-														...prev,
-														rooms: prev.rooms + 1,
-													}))
-												}>
-												+
-											</Button>
-										</div>
-									</div>
+									))}
 								</div>
 							</PopoverContent>
 						</Popover>
 					</div>
 				</div>
 			</div>
-			<div className="bg-black px-4 py-3 cursor-pointer rounded-md flex items-center gap-2 absolute -bottom-5 right-10">
+			<div
+				onClick={handleSearch}
+				className="bg-black px-4 py-3 cursor-pointer rounded-md flex items-center gap-2 absolute -bottom-5 right-10 hover:bg-gray-800 transition-colors">
 				<Send className="w-4 h-4 text-white" />
-				<button className="text-base font-medium text-white leading-tight pointer-events-none">
+				<span className="text-base font-medium text-white leading-tight">
 					Search
-				</button>
+				</span>
 			</div>
 		</div>
 	);

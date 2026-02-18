@@ -49,7 +49,6 @@ export default function NavBar() {
 					/>
 					<nav className="flex gap-6">
 						{[
-							{ label: "Home", href: "/" },
 							{ label: "About", href: "/about" },
 							{ label: "Services", href: "/services" },
 							{ label: "Pricing", href: "/pricing" },

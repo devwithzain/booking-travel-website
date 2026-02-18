@@ -100,6 +100,7 @@ import {
 	Wifi,
 	Accessibility,
 } from "lucide-react";
+import { THotelDetail } from "@/types";
 
 export const testimonialsData = [
 	{
@@ -870,3 +871,288 @@ export const whyChooseUsData = [
 		color: "text-cyan-600",
 	},
 ];
+
+export const hotelDetailData: THotelDetail = {
+	hotel_id: 10004,
+	name: "Courtyard by Marriott New York",
+	address: "9959 W Century Blvd, Los Angeles",
+	city: "New York",
+	country: "United States",
+	latitude: 40.758,
+	longitude: -73.9855,
+	star_rating: 5,
+	checkin: { from: "3:00 PM", to: "12:00 AM" },
+	checkout: { from: "12:00 AM", to: "11:00 AM" },
+	price_from: 3500,
+	currency: "USD",
+	description:
+		"Departure defective arranging rapturous did believe him all had supported. Departure defective arranging rapturous did believe him all had supported. Water dried point her she threw took. Departure defective arranging rapturous did believe him all had supported. Departure defective arranging rapturous did believe him all had supported. Departure defective arranging rapturous did believe him all had supported did believe him all had. Departure defective arranging rapturous did believe him all had supported.",
+	description_highlights: [
+		"Every hotel staff to have proper PPT kit for COVID-19.",
+		"Every staff member wears face masks and gloves at all service times.",
+		"Hotel staff ensures to maintain social distancing at all times.",
+		"The hotel has in-room dining options available.",
+	],
+	facilities: [
+		{
+			facilitytype_name: "Activities",
+			facilities: [
+				{ name: "Swimming pool" },
+				{ name: "Spa" },
+				{ name: "Kids' play area" },
+				{ name: "Gym" },
+			],
+		},
+		{
+			facilitytype_name: "Services",
+			facilities: [
+				{ name: "Dry cleaning" },
+				{ name: "Room service" },
+				{ name: "Special service" },
+				{ name: "Waiting Area" },
+				{ name: "Souvenir smoking area" },
+				{ name: "Concierge" },
+				{ name: "Laundry facilities" },
+				{ name: "Ironing Service" },
+				{ name: "Lift" },
+			],
+		},
+		{
+			facilitytype_name: "Payment Method",
+			facilities: [
+				{ name: "Credit card (Visa, Master card)" },
+				{ name: "Cash" },
+				{ name: "Debit Card" },
+			],
+		},
+		{
+			facilitytype_name: "Safety & Security",
+			facilities: [{ name: "Doctor on Call" }],
+		},
+	],
+	languages: ["English", "Spanish", "Hindi"],
+	payment_methods: ["Visa", "Mastercard", "Cash", "Debit Card"],
+	policies: [
+		"This is a family farmhouse, hence we request you to not budge.",
+		"Smoking and smoking within controlled limits are permitted at the farmhouse, but please do not create a mess or nuisance at the house.",
+		"Drugs and intoxicating illegal products are banned and not to be brought to the house or consumed.",
+		"For any update, the customer shall pay applicable cancellation/modification charges.",
+		"Check-in 1:00 pm - 9:00 pm",
+		"Check-out 9:00 am",
+		"Self check-in with building staff",
+		"No pets",
+		"No parties or events",
+		"Smoking is allowed",
+	],
+	photos: [
+		{
+			photo_id: 1,
+			url_max:
+				"https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
+			url_square60:
+				"https://images.unsplash.com/photo-1566073771259-6a8506099945?w=60&q=80",
+			tags: ["exterior", "pool"],
+		},
+		{
+			photo_id: 2,
+			url_max:
+				"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+			url_square60:
+				"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=60&q=80",
+			tags: ["room", "bedroom"],
+		},
+		{
+			photo_id: 3,
+			url_max:
+				"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+			url_square60:
+				"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=60&q=80",
+			tags: ["bathroom"],
+		},
+		{
+			photo_id: 4,
+			url_max:
+				"https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
+			url_square60:
+				"https://images.unsplash.com/photo-1590490360182-c33d57733427?w=60&q=80",
+			tags: ["room", "luxury"],
+		},
+		{
+			photo_id: 5,
+			url_max:
+				"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+			url_square60:
+				"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=60&q=80",
+			tags: ["exterior", "pool"],
+		},
+	],
+	rooms: [
+		{
+			room_id: "room_001",
+			room_name: "Luxury Room with Balcony",
+			photos: [
+				{
+					url_original:
+						"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80",
+				},
+			],
+			highlights: [
+				{ icon: "ac", translated_name: "Air Conditioning" },
+				{ icon: "wifi", translated_name: "Free WiFi" },
+				{ icon: "kitchen", translated_name: "Kitchen" },
+				{ icon: "tv", translated_name: "Flat-screen TV" },
+			],
+			bed_configurations: [{ bed_types: [{ name: "King Bed", count: 1 }] }],
+			private_bathroom_count: 1,
+			nr_adults: 2,
+			price_breakdown: {
+				gross_price: 750,
+				currency: "USD",
+				strikethrough_price: 950,
+			},
+			free_cancellation: true,
+			free_cancellation_until: "Jan 2025",
+			breakfast_included: false,
+			url: "https://www.booking.com/hotel/us/courtyard-marriott-new-york.html",
+		},
+		{
+			room_id: "room_002",
+			room_name: "Deluxe Pool View with Breakfast",
+			photos: [
+				{
+					url_original:
+						"https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=80",
+				},
+			],
+			highlights: [
+				{ icon: "ac", translated_name: "Air Conditioning" },
+				{ icon: "wifi", translated_name: "Free WiFi" },
+				{ icon: "breakfast", translated_name: "Breakfast" },
+				{ icon: "pool", translated_name: "Pool View" },
+			],
+			bed_configurations: [{ bed_types: [{ name: "Queen Bed", count: 2 }] }],
+			private_bathroom_count: 1,
+			nr_adults: 3,
+			price_breakdown: {
+				gross_price: 750,
+				currency: "USD",
+				strikethrough_price: 990,
+			},
+			free_cancellation: false,
+			breakfast_included: true,
+			url: "https://www.booking.com/hotel/us/courtyard-marriott-new-york.html",
+		},
+		{
+			room_id: "room_003",
+			room_name: "Presidential Suite",
+			photos: [
+				{
+					url_original:
+						"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=80",
+				},
+			],
+			highlights: [
+				{ icon: "ac", translated_name: "Air Conditioning" },
+				{ icon: "wifi", translated_name: "Free WiFi" },
+				{ icon: "kitchen", translated_name: "Full Kitchen" },
+				{ icon: "bathtub", translated_name: "Jacuzzi" },
+			],
+			bed_configurations: [
+				{
+					bed_types: [
+						{ name: "King Bed", count: 1 },
+						{ name: "Sofa Bed", count: 1 },
+					],
+				},
+			],
+			private_bathroom_count: 2,
+			nr_adults: 4,
+			price_breakdown: {
+				gross_price: 1450,
+				currency: "USD",
+				strikethrough_price: 1800,
+			},
+			free_cancellation: true,
+			free_cancellation_until: "Feb 2025",
+			breakfast_included: true,
+			url: "https://www.booking.com/hotel/us/courtyard-marriott-new-york.html",
+		},
+	],
+	review_scores: {
+		review_score: 8.9,
+		review_score_word: "Superb",
+		review_count: 122,
+		score_breakdown: {
+			staff: 9.2,
+			facilities: 8.8,
+			cleanliness: 9.1,
+			comfort: 9.0,
+			value_for_money: 8.5,
+			location: 9.4,
+		},
+		percentage_breakdown: {
+			score_10: 95,
+			score_9: 75,
+			score_8: 60,
+			score_7: 30,
+			score_6: 15,
+		},
+	},
+	reviews: [
+		{
+			review_id: "rv_001",
+			reviewer: {
+				name: "Jacqueline Miller",
+				country_flag_url: "https://flagcdn.com/w40/us.png",
+				helpful_vote_count: 8,
+			},
+			date: "August 2024 · 2 Reviews written",
+			pros: "Handsome not debating an dwelling apt material. As sure fixed he verse most. Object detect related so returns we private removed. Moderate do subjects to distance.",
+			cons: "Nothing to complain about. Everything was perfect!",
+			average_score: 8.2,
+			review_photos: [
+				{
+					url_max300:
+						"https://images.unsplash.com/photo-1566073771259-6a8506099945?w=300&q=80",
+				},
+				{
+					url_max300:
+						"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=300&q=80",
+				},
+			],
+			hotel_response:
+				"Su direction frequently do not inaccurate us unaffected adulterous everything. Thank you for your kind words!",
+		},
+		{
+			review_id: "rv_002",
+			reviewer: {
+				name: "Dennis Barrett",
+				country_flag_url: "https://flagcdn.com/w40/gb.png",
+				helpful_vote_count: 4,
+			},
+			date: "August 2024 · 3 Reviews written",
+			pros: "Departure defective arranging rapturous did believe him. Felt smells halls right away if on such. Large above be to means.",
+			cons: "Dashwood does provide stronger to the customer service team.",
+			average_score: 7.6,
+			review_photos: [],
+		},
+		{
+			review_id: "rv_003",
+			reviewer: {
+				name: "Sophia Turner",
+				country_flag_url: "https://flagcdn.com/w40/au.png",
+				helpful_vote_count: 12,
+			},
+			date: "July 2024 · 7 Reviews written",
+			pros: "Absolutely stunning hotel. The pool view from our room was breathtaking and the breakfast spread was incredible.",
+			cons: "Minor issue with AC noise at night, but staff fixed it immediately.",
+			average_score: 9.4,
+			review_photos: [
+				{
+					url_max300:
+						"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=300&q=80",
+				},
+			],
+		},
+	],
+};

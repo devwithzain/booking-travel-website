@@ -29,3 +29,5 @@ export { default as WhyChooseUs } from "./cabs/why-chose-us";
 
 export { default as ContactHero } from "./contact/hero";
 export { default as ContactForm } from "./contact/form";
+
+export { default as HotelDetail } from "./hotel-detail/hotel-detail";
