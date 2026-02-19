@@ -192,3 +192,48 @@ export type THotelDetail = {
 	review_scores: TReviewScore;
 	reviews: TReview[];
 };
+
+export type TLeg = {
+	departureAirport: {
+		code: string;
+		name: string;
+		cityName: string;
+		terminal?: string;
+	};
+	arrivalAirport: {
+		code: string;
+		name: string;
+		cityName: string;
+		terminal?: string;
+	};
+	departureTime: string;
+	arrivalTime: string;
+	totalTime: number; // minutes
+	stopCount: number;
+	carriersData: { name: string; code: string; logo: string }[];
+	flightInfo: { flightNumber: string; planeType?: string };
+	cabinClass: string;
+};
+
+export type TSegment = {
+	legs: TLeg[];
+	totalTime: number;
+};
+
+export type TFlight = {
+	token: string;
+	segments: TSegment[];
+	priceBreakdown: {
+		total: { units: number; currencyCode: string };
+		baseFare: { units: number; currencyCode: string };
+		tax: { units: number; currencyCode: string };
+	};
+	isRefundable: boolean;
+	seatsLeft?: number;
+	shareableUrl: string;
+	travellerCabinClass: string;
+	brandedFareInfo?: {
+		fareName: string;
+		features: { label: string; availability: string }[];
+	};
+};

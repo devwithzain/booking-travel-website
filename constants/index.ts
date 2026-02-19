@@ -100,7 +100,7 @@ import {
 	Wifi,
 	Accessibility,
 } from "lucide-react";
-import { THotelDetail } from "@/types";
+import { TFlight, THotelDetail } from "@/types";
 
 export const testimonialsData = [
 	{
@@ -1156,3 +1156,263 @@ export const hotelDetailData: THotelDetail = {
 		},
 	],
 };
+
+export const flightsData: TFlight[] = [
+	{
+		token: "flight_001",
+		segments: [
+			{
+				legs: [
+					{
+						departureAirport: {
+							code: "KHI",
+							name: "Jinnah International",
+							cityName: "Karachi",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "DXB",
+							name: "Dubai International",
+							cityName: "Dubai",
+							terminal: "T2",
+						},
+						departureTime: "2026-03-01T14:50:00",
+						arrivalTime: "2026-03-01T17:35:00",
+						totalTime: 165,
+						stopCount: 0,
+						carriersData: [
+							{
+								name: "Emirates",
+								code: "EK",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg",
+							},
+						],
+						flightInfo: { flightNumber: "EK-612", planeType: "Boeing 777" },
+						cabinClass: "ECONOMY",
+					},
+				],
+				totalTime: 165,
+			},
+		],
+		priceBreakdown: {
+			total: { units: 18500, currencyCode: "PKR" },
+			baseFare: { units: 15000, currencyCode: "PKR" },
+			tax: { units: 3500, currencyCode: "PKR" },
+		},
+		isRefundable: true,
+		seatsLeft: 10,
+		shareableUrl: "https://www.booking.com/flights",
+		travellerCabinClass: "ECONOMY",
+	},
+	{
+		token: "flight_002",
+		segments: [
+			{
+				legs: [
+					{
+						departureAirport: {
+							code: "KHI",
+							name: "Jinnah International",
+							cityName: "Karachi",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "DXB",
+							name: "Dubai International",
+							cityName: "Dubai",
+							terminal: "T3",
+						},
+						departureTime: "2026-03-01T08:20:00",
+						arrivalTime: "2026-03-01T11:05:00",
+						totalTime: 165,
+						stopCount: 0,
+						carriersData: [
+							{
+								name: "Pakistan International",
+								code: "PK",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PIA_Logo.svg/120px-PIA_Logo.svg.png",
+							},
+						],
+						flightInfo: { flightNumber: "PK-210", planeType: "Airbus A320" },
+						cabinClass: "ECONOMY",
+					},
+				],
+				totalTime: 165,
+			},
+		],
+		priceBreakdown: {
+			total: { units: 15200, currencyCode: "PKR" },
+			baseFare: { units: 12500, currencyCode: "PKR" },
+			tax: { units: 2700, currencyCode: "PKR" },
+		},
+		isRefundable: false,
+		seatsLeft: 25,
+		shareableUrl: "https://www.booking.com/flights",
+		travellerCabinClass: "ECONOMY",
+	},
+	{
+		token: "flight_003",
+		segments: [
+			{
+				legs: [
+					{
+						departureAirport: {
+							code: "KHI",
+							name: "Jinnah International",
+							cityName: "Karachi",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "IST",
+							name: "Istanbul Airport",
+							cityName: "Istanbul",
+							terminal: "T1",
+						},
+						departureTime: "2026-03-01T04:50:00",
+						arrivalTime: "2026-03-01T09:15:00",
+						totalTime: 385,
+						stopCount: 1,
+						carriersData: [
+							{
+								name: "Turkish Airlines",
+								code: "TK",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Turkish_Airlines_logo_2019_compact.svg/120px-Turkish_Airlines_logo_2019_compact.svg.png",
+							},
+						],
+						flightInfo: { flightNumber: "TK-709", planeType: "Boeing 737" },
+						cabinClass: "ECONOMY",
+					},
+					{
+						departureAirport: {
+							code: "IST",
+							name: "Istanbul Airport",
+							cityName: "Istanbul",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "DXB",
+							name: "Dubai International",
+							cityName: "Dubai",
+							terminal: "T2",
+						},
+						departureTime: "2026-03-01T11:30:00",
+						arrivalTime: "2026-03-01T15:45:00",
+						totalTime: 255,
+						stopCount: 0,
+						carriersData: [
+							{
+								name: "Turkish Airlines",
+								code: "TK",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Turkish_Airlines_logo_2019_compact.svg/120px-Turkish_Airlines_logo_2019_compact.svg.png",
+							},
+						],
+						flightInfo: { flightNumber: "TK-760", planeType: "Boeing 737" },
+						cabinClass: "ECONOMY",
+					},
+				],
+				totalTime: 655,
+			},
+		],
+		priceBreakdown: {
+			total: { units: 22000, currencyCode: "PKR" },
+			baseFare: { units: 18500, currencyCode: "PKR" },
+			tax: { units: 3500, currencyCode: "PKR" },
+		},
+		isRefundable: true,
+		seatsLeft: 4,
+		shareableUrl: "https://www.booking.com/flights",
+		travellerCabinClass: "ECONOMY",
+	},
+	{
+		token: "flight_004",
+		segments: [
+			{
+				legs: [
+					{
+						departureAirport: {
+							code: "KHI",
+							name: "Jinnah International",
+							cityName: "Karachi",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "DXB",
+							name: "Dubai International",
+							cityName: "Dubai",
+							terminal: "T1",
+						},
+						departureTime: "2026-03-01T22:15:00",
+						arrivalTime: "2026-03-02T01:00:00",
+						totalTime: 165,
+						stopCount: 0,
+						carriersData: [
+							{
+								name: "flydubai",
+								code: "FZ",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Flydubai_logo.svg/120px-Flydubai_logo.svg.png",
+							},
+						],
+						flightInfo: { flightNumber: "FZ-349", planeType: "Boeing 737 MAX" },
+						cabinClass: "BUSINESS",
+					},
+				],
+				totalTime: 165,
+			},
+		],
+		priceBreakdown: {
+			total: { units: 45000, currencyCode: "PKR" },
+			baseFare: { units: 38000, currencyCode: "PKR" },
+			tax: { units: 7000, currencyCode: "PKR" },
+		},
+		isRefundable: true,
+		seatsLeft: 2,
+		shareableUrl: "https://www.booking.com/flights",
+		travellerCabinClass: "BUSINESS",
+	},
+	{
+		token: "flight_005",
+		segments: [
+			{
+				legs: [
+					{
+						departureAirport: {
+							code: "KHI",
+							name: "Jinnah International",
+							cityName: "Karachi",
+							terminal: "T1",
+						},
+						arrivalAirport: {
+							code: "DXB",
+							name: "Dubai International",
+							cityName: "Dubai",
+							terminal: "T2",
+						},
+						departureTime: "2026-03-01T16:40:00",
+						arrivalTime: "2026-03-01T19:25:00",
+						totalTime: 165,
+						stopCount: 0,
+						carriersData: [
+							{
+								name: "Air Arabia",
+								code: "G9",
+								logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Air_Arabia_Logo.svg/120px-Air_Arabia_Logo.svg.png",
+							},
+						],
+						flightInfo: { flightNumber: "G9-501", planeType: "Airbus A320" },
+						cabinClass: "ECONOMY",
+					},
+				],
+				totalTime: 165,
+			},
+		],
+		priceBreakdown: {
+			total: { units: 13800, currencyCode: "PKR" },
+			baseFare: { units: 11500, currencyCode: "PKR" },
+			tax: { units: 2300, currencyCode: "PKR" },
+		},
+		isRefundable: false,
+		seatsLeft: 18,
+		shareableUrl: "https://www.booking.com/flights",
+		travellerCabinClass: "ECONOMY",
+	},
+];
